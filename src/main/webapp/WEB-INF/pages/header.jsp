@@ -7,5 +7,5 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <tr>
-    <td class="header" colspan="2">Azamat Tadeev (P3211), variant 28120</td>
+    <td class="header" colspan="2">Azamat Tadeev & Levenets Denis (P3211), variant 75841</td>
 </tr>

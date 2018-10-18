@@ -9,10 +9,10 @@
 <td class="sidebar">
     <ul>
         <li>
-            <a href="" class="button">Task</a>
+            <a href="task.jsp" class="button">Task</a>
         </li>
         <li>
-            <a href="" class="button">Solution</a>
+            <a href="form.jsp" class="button">Form</a>
         </li>
     </ul>
     <div class="advertise">
