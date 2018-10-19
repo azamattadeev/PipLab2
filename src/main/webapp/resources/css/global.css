@@ -98,18 +98,22 @@ table {
 
 .area-image {
 	float: right;
-	padding: 30px 100px;
+	margin-top: 40px;
+	margin-right: 100px;
+
 	border-radius: 15px;
 }
 
+#hiddenForm{
+	display: none;
+}
+
 #point-form {
-	padding-left: 5%;
 	font-size: 1.2em;
 	text-align: center;
 	background-color: #E6E6E6;
-	padding: 8px;
 	border-radius: 10px;
-	padding-bottom: 20px;
+	padding: 8px 8px 20px;
 }
 
 input[type="checkbox"],
