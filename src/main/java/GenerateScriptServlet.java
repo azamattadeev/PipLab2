@@ -20,6 +20,7 @@ public class GenerateScriptServlet extends HttpServlet {
         HashMap<String, List<Point>> map = (HashMap<String, List<Point>>) context.getAttribute("pointsListsMap");
         if(map == null) return;
         List<Point> pointsList = map.get(session.getId());
+        if (pointsList == null) return;
         int listSize = pointsList.size();
         Iterator<Point> iterator = pointsList.iterator();
         int count = 0;
