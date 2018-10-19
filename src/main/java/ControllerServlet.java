@@ -25,7 +25,7 @@ public class ControllerServlet extends HttpServlet {
             return;
         }else {
             try {
-                int x = Integer.parseInt(xString);
+                double x = Double.parseDouble(xString);
                 int r = Integer.parseInt(rString);
                 double y =Double.parseDouble(yString);
             } catch (Exception ex) {
