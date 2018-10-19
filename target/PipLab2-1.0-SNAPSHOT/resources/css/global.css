@@ -121,11 +121,15 @@ input[type="radio"]{
 	text-align: center;
 }
 
-input[type="text"][name="y"] {
+input[type="text"][name="yValue"] {
 	width: 60px;
 	text-align: center;
 	font-size: 18px;
 	margin-top: 6px;
+}
+
+select[name="rValue"]{
+	padding: 4px;
 }
 
 input[type="submit"] {
