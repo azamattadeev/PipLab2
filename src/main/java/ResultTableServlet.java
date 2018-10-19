@@ -24,6 +24,7 @@ public class ResultTableServlet extends HttpServlet {
         HashMap<String, List<Point>> map = (HashMap<String, List<Point>>) context.getAttribute("pointsListsMap");
         if (map == null) return;
         List<Point> pointsList = map.get(req.getSession().getId());
+        if (pointsList == null) return;
         Iterator<Point> iterator = pointsList.iterator();
         if (pointsList.size() == 0) return;
         out.println("<table class=\"results-table\">");
