@@ -40,7 +40,7 @@ public class AreaCheckServlet extends HttpServlet {
             pointsListsMap.put(SSID, new ArrayList<Point>());
             pointsList = pointsListsMap.get(SSID);
         }
-        pointsList.add(currentPoint);
+        pointsList.add(0,currentPoint);
         String resultString = (currentPoint.isInArea()) ? "Hit!" : "Miss!";
         PrintWriter out = resp.getWriter();
         out.println("<table class=\"results-table\" style=\"margin-left:auto;margin-right:auto\">");

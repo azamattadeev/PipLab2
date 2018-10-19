@@ -56,13 +56,13 @@
             </div>
             <div id="results-table-wrapper">
 
-                <%-- Result table --%>
-                <jsp:include page="WEB-INF/generatescript"/>
+                <jsp:include page="WEB-INF/resulttable"/>
+
             </div>
         </td>
     </tr>
 </table>
-
+<jsp:include page="WEB-INF/generatescript"/>
 <script src="resources/js/validation.js"></script>
 
 </body>

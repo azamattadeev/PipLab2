@@ -18,6 +18,7 @@
         <servlet-name>Area Check Servlet</servlet-name>
         <url-pattern>/WEB-INF/check</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>GenerateScriptServlet</servlet-name>
         <servlet-class>GenerateScriptServlet</servlet-class>
@@ -25,6 +26,15 @@
     <servlet-mapping>
         <servlet-name>GenerateScriptServlet</servlet-name>
         <url-pattern>/WEB-INF/generatescript</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ResultTableServlet</servlet-name>
+        <servlet-class>ResultTableServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResultTableServlet</servlet-name>
+        <url-pattern>/WEB-INF/resulttable</url-pattern>
     </servlet-mapping>
 
 </web-app>

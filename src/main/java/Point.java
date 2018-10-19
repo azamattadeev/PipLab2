@@ -9,8 +9,8 @@ public class Point {
         this.y = y;
         this.r = r;
         inArea = false;
-        if (x >= 0 && y >= 0 && y >= -x + r) inArea = true;
-        if (x >= 0 && y <= 0 && y >= -r && x <= r/2) inArea = true;
+        if (x >= 0 && y >= 0 && y <= -x + r) inArea = true;
+        if (x >= 0 && y <= 0 && y >= -r && 2*x <= r) inArea = true;
         if (x <= 0 && y >= 0 && x*x + y*y <= r*r) inArea = true;
     }
 
