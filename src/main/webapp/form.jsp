@@ -57,7 +57,7 @@
             <div id="results-table-wrapper">
 
                 <%-- Result table --%>
-
+                <jsp:include page="WEB-INF/generatescript"/>
             </div>
         </td>
     </tr>
