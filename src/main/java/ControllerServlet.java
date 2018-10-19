@@ -15,13 +15,13 @@ public class ControllerServlet extends HttpServlet {
     }
 
     @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse resp){
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 
         String yString = req.getParameter("yValue");
         String xString = req.getParameter("xValue");
         String rString = req.getParameter("rValue");
         if (xString == null || yString == null || rString == null) {
-            redirectToForm(resp);
+            resp.sendRedirect("form.jsp");
             return;
         }else {
             try {
@@ -29,25 +29,12 @@ public class ControllerServlet extends HttpServlet {
                 int r = Integer.parseInt(rString);
                 double y =Double.parseDouble(yString);
             } catch (Exception ex) {
-                redirectToForm(resp);
+                resp.sendRedirect("form.jsp");
                 return;
             }
-            try {
-                context.getRequestDispatcher("/WEB-INF/pages/result.jsp").forward(req, resp);
-            }catch (ServletException sex){
-                context.log(sex.getMessage());
-            }catch (IOException ioex){
-                context.log(ioex.getMessage());
-            }
+            context.getRequestDispatcher("/WEB-INF/pages/result.jsp").forward(req, resp);
         }
     }
 
-    private void redirectToForm(HttpServletResponse resp){
-        try {
-            resp.sendRedirect("form.jsp");
-        }catch (IOException ioex){
-            context.log(ioex.getMessage());
-        }
-    }
 
 }
