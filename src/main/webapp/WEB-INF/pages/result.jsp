@@ -9,8 +9,8 @@
 <html>
 <head>
     <title>Result Page</title>
-    <link rel="stylesheet" type="text/css" href="../../resources/css/global.css">
-    <link rel="shortcut icon" href="../../resources/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="resources/css/global.css">
+    <link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <table>
@@ -19,7 +19,7 @@
             <jsp:include page="sidebar.jsp"/>
             <td>
 
-                <a class="button">Страница формы</a>
+                <a href="form.jsp" class="button">Страница формы</a>
             </td>
         </tr>
     </table>

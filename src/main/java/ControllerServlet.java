@@ -22,13 +22,15 @@ public class ControllerServlet extends HttpServlet {
         String rString = req.getParameter("rValue");
         if (xString == null || yString == null || rString == null) {
             redirectToForm(resp);
+            return;
         }else {
             try {
-                Integer.parseInt(xString);
-                Integer.parseInt(rString);
-                Double.parseDouble(yString);
+                int x = Integer.parseInt(xString);
+                int r = Integer.parseInt(rString);
+                double y =Double.parseDouble(yString);
             } catch (Exception ex) {
                 redirectToForm(resp);
+                return;
             }
             try {
                 context.getRequestDispatcher("/WEB-INF/pages/result.jsp").forward(req, resp);
