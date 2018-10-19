@@ -55,7 +55,9 @@
                 </form>
             </div>
             <div id="results-table-wrapper">
-             
+
+                <%-- Result table --%>
+
             </div>
         </td>
     </tr>

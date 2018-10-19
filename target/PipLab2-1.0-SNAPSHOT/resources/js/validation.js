@@ -1,3 +1,29 @@
+let x;
+let y;
+let xcoor;
+let ycoor;
+var example = document.getElementById("canvas");
+ctx = example.getContext('2d');
+pic = new Image();
+example.width = 230;
+example.height = 215;
+pic.src = "resources/images/areas.jpg";
+
+pic.onload = function () {
+    ctx.drawImage(pic, 0, 0, 230, 215)
+};
+
+function coordinaty(event) {
+    x = event.offsetX;
+    y = event.offsetY;
+    xcoor = (((x - 110) / 80) * takeR());
+    ycoor = (-((y - 107) / 80) *takeR());
+document.getElementById('xValue11').value=xcoor;
+document.getElementById('yValue11').value=ycoor;
+document.getElementById('rValue11').value=takeR();
+document.getElementById('hiddenForm').submit();
+}
+
 function validate() {
     if (checkX() === false || checkY() === false) {
         return false;
@@ -47,7 +73,9 @@ function checkY() {
 }
 
 function takeR() {
-    var rValue=document.querySelectorAll();
+    var select = document.getElementById("rValue");
+    var value = select.value;
+    return value;
 
 }
 

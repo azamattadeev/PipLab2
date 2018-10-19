@@ -20,7 +20,7 @@
         <td class="content">
             <div id="point-form" class="point-form">
                 <form action="controller" method="GET" onsubmit="return validate()">
-                    <img src="resources/images/area.png" alt="Area image unavailable" class="area-image">
+                    <canvas id="canvas" class="area-image" onclick="coordinaty(event)"></canvas>
                     <p id="x_label">Choose x values:</p>
                     <p>
                         <label><input type="radio" class="xValue" name="xValue" id="xValue1" value="-2">-3</label>
@@ -34,11 +34,10 @@
                         <label><input type="radio" class="xValue" name="xValue" id="xValue9" value="-2"> 5</label>
                     </p>
                     <p>
-                        <label id="y_label">Enter y value:<br/><input maxlength="6" id="yValue" type="text" name="yValue"
-                                                                      placeholder="(-5; 3)"></label>
+                        <label id="y_label">Enter y value:<br/><input maxlength="6" id="yValue" type="text" name="yValue" placeholder="(-5; 3)"></label>
                     </p>
                     <p id="r_label">Select r value:</p>
-                    <select name="rValue"><p>
+                    <select id="rValue" name="rValue"><p>
                         <option id="rValue1" value="1">1</option>
                         <option id="rValue2" value="2">2</option>
                         <option id="rValue3" value="3">3</option>
@@ -46,14 +45,18 @@
                         <option id="rValue5" value="5">5</option>
                     </p></select>
                     <br>
-
                     <br>
                     <input class="button" type="submit" name="point-form-submit" value="Submit" onclick="">
+                </form>
+                <form action="controller" id="hiddenForm" method="GET" >
+                    <input type="text" id="xValue11" class="xValue" name="xValue" >
+                    <input type="text" id="yValue11" name="yValue">
+                    <input type="text" id="rValue11" name="rValue">
                 </form>
             </div>
             <div id="results-table-wrapper">
 
-                <%-- Results table --%>
+                <%-- Result table --%>
 
             </div>
         </td>

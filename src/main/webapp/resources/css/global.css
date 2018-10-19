@@ -13,7 +13,7 @@ table {
 	padding: 0;
 }
 
-.header {	
+.header {
 	padding: 12px;
 	color: #DDDDDD;
 	font-size: 1.1em;
@@ -125,6 +125,10 @@ input[type="radio"]{
 	text-align: center;
 }
 
+.check-content{
+    text-align: center;
+}
+
 input[type="text"][name="yValue"] {
 	width: 60px;
 	text-align: center;
@@ -154,7 +158,6 @@ input[type="submit"] {
 	width: 65%;
 	margin: 30px;
 	margin-left: 15px;
-	margin-top: 30px;
 	border-collapse: collapse;
 	border: 1px solid black;
 }

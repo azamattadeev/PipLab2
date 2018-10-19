@@ -18,9 +18,6 @@ function coordinaty(event) {
     y = event.offsetY;
     xcoor = (((x - 110) / 80) * takeR());
     ycoor = (-((y - 107) / 80) *takeR());
-    alert(takeR());
-    alert(xcoor);
-    alert(ycoor);
 document.getElementById('xValue11').value=xcoor;
 document.getElementById('yValue11').value=ycoor;
 document.getElementById('rValue11').value=takeR();

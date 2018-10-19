@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -40,6 +41,22 @@ public class AreaCheckServlet extends HttpServlet {
             pointsList = pointsListsMap.get(SSID);
         }
         pointsList.add(currentPoint);
-
+        String resultString = (currentPoint.isInArea()) ? "Hit!" : "Miss!";
+        PrintWriter out = resp.getWriter();
+        out.println("<table class=\"results-table\" style=\"margin-left:auto;margin-right:auto\">");
+        out.println("<caption>Check result</caption>");
+        out.println("<tr>");
+        out.println("<th>" + "X" + "</th>");
+        out.println("<th>" + "Y" + "</th>");
+        out.println("<th>" + "R" + "</th>");
+        out.println("<th>" + "Result" + "</th>");
+        out.println("</tr>");
+        out.println("<tr>");
+        out.println("<td>" + x + "</td>");
+        out.println("<td>" + y + "</td>");
+        out.println("<td>" + r + "</td>");
+        out.println("<td>" + resultString + "</td>");
+        out.println("</tr>");
+        out.println("</table>");
     }
 }

@@ -18,8 +18,11 @@
         <tr>
             <jsp:include page="sidebar.jsp"/>
             <td>
-
-                <a href="form.jsp" class="button">Страница формы</a>
+                <div class="check-content">
+                    <jsp:include page="/WEB-INF/check"/>
+                    <a href="form.jsp" class="button">Страница формы</a>
+                </div>
+            </td>
             </td>
         </tr>
     </table>

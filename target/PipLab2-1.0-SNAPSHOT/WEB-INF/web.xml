@@ -10,4 +10,13 @@
         <url-pattern>/controller</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Area Check Servlet</servlet-name>
+        <servlet-class>AreaCheckServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Area Check Servlet</servlet-name>
+        <url-pattern>/WEB-INF/check</url-pattern>
+    </servlet-mapping>
+
 </web-app>

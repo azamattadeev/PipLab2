@@ -13,7 +13,7 @@ table {
 	padding: 0;
 }
 
-.header {	
+.header {
 	padding: 12px;
 	color: #DDDDDD;
 	font-size: 1.1em;
@@ -98,18 +98,22 @@ table {
 
 .area-image {
 	float: right;
-	padding: 30px 100px;
+	margin-top: 40px;
+	margin-right: 100px;
+
 	border-radius: 15px;
 }
 
+#hiddenForm{
+	display: none;
+}
+
 #point-form {
-	padding-left: 5%;
 	font-size: 1.2em;
 	text-align: center;
 	background-color: #E6E6E6;
-	padding: 8px;
 	border-radius: 10px;
-	padding-bottom: 20px;
+	padding: 8px 8px 20px;
 }
 
 input[type="checkbox"],
@@ -119,6 +123,10 @@ input[type="radio"]{
 
 .point-form p {
 	text-align: center;
+}
+
+.check-content{
+    text-align: center;
 }
 
 input[type="text"][name="yValue"] {
@@ -150,7 +158,6 @@ input[type="submit"] {
 	width: 65%;
 	margin: 30px;
 	margin-left: 15px;
-	margin-top: 30px;
 	border-collapse: collapse;
 	border: 1px solid black;
 }
