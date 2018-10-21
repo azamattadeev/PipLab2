@@ -28,6 +28,10 @@ public class ControllerServlet extends HttpServlet {
                 double x = Double.parseDouble(xString);
                 int r = Integer.parseInt(rString);
                 double y =Double.parseDouble(yString);
+                if (x < -3 || x > 5 || y <= -5 || y >= 3 || r < 1 || r > 5){
+                    resp.sendRedirect("form.jsp");
+                    return;
+                }
             } catch (Exception ex) {
                 resp.sendRedirect("form.jsp");
                 return;
