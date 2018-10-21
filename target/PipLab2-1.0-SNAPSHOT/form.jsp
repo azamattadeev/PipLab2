@@ -19,19 +19,19 @@
         <jsp:include page="WEB-INF/pages/sidebar.jsp"/>
         <td class="content">
             <div id="point-form" class="point-form">
-                <form action="controller" method="GET" onsubmit="return validate()">
-                    <canvas id="canvas" class="area-image" onclick="coordinaty(event)"></canvas>
+                <form id="submit-form" action="controller" method="GET" onsubmit="return validate()">
+                    <canvas style="background-image: url('resources/images/areas.jpg')" id="canvas" class="area-image" onclick="coordinaty(event)"></canvas>
                     <p id="x_label">Choose x values:</p>
                     <p>
-                        <label><input type="radio" class="xValue" name="xValue" id="xValue1" value="-2">-3</label>
-                        <label><input type="radio" class="xValue" name="xValue" id="xValue2" value="-1">-2</label>
-                        <label><input type="radio" class="xValue" name="xValue" id="xValue3" value="0">-1</label>
-                        <label><input type="radio" class="xValue" name="xValue" id="xValue4" value="1"> 0</label>
-                        <label><input type="radio" class="xValue" name="xValue" id="xValue5" value="2"> 1</label>
-                        <label><input type="radio" class="xValue" name="xValue" id="xValue6" value="3"> 2</label>
-                        <label><input type="radio" class="xValue" name="xValue" id="xValue7" value="4"> 3</label>
-                        <label><input type="radio" class="xValue" name="xValue" id="xValue8" value="-2"> 4</label>
-                        <label><input type="radio" class="xValue" name="xValue" id="xValue9" value="-2"> 5</label>
+                        <label><input type="radio" class="xValue" name="xValue" id="xValue1" value="-3">-3</label>
+                        <label><input type="radio" class="xValue" name="xValue" id="xValue2" value="-2">-2</label>
+                        <label><input type="radio" class="xValue" name="xValue" id="xValue3" value="-1">-1</label>
+                        <label><input type="radio" class="xValue" name="xValue" id="xValue4" value="0"> 0</label>
+                        <label><input type="radio" class="xValue" name="xValue" id="xValue5" value="1"> 1</label>
+                        <label><input type="radio" class="xValue" name="xValue" id="xValue6" value="2"> 2</label>
+                        <label><input type="radio" class="xValue" name="xValue" id="xValue7" value="3"> 3</label>
+                        <label><input type="radio" class="xValue" name="xValue" id="xValue8" value="4"> 4</label>
+                        <label><input type="radio" class="xValue" name="xValue" id="xValue9" value="5"> 5</label>
                     </p>
                     <p>
                         <label id="y_label">Enter y value:<br/><input maxlength="6" id="yValue" type="text" name="yValue" placeholder="(-5; 3)"></label>
@@ -46,7 +46,7 @@
                     </p></select>
                     <br>
                     <br>
-                    <input class="button" type="submit" name="point-form-submit" value="Submit" onclick="">
+                    <input class="button" type="button" name="point-form-submit" value="Submit" onclick="validate();">
                 </form>
                 <form action="controller" id="hiddenForm" method="GET" >
                     <input type="text" id="xValue11" class="xValue" name="xValue" >
@@ -63,6 +63,7 @@
     </tr>
 </table>
 <jsp:include page="WEB-INF/generatescript"/>
+<script src="resources/js/jquery-3.3.1.js"></script>
 <script src="resources/js/validation.js"></script>
 
 </body>
